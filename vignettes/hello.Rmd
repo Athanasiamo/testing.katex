@@ -1,0 +1,22 @@
+---
+title: "hello"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{hello}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(testing.katex)
+```
+
+```{r child="../man/fragments/equation.Rmd"} 
+```

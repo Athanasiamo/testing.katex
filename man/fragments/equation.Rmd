@@ -1,0 +1,21 @@
+```{r, include=FALSE}
+equation <- "\\frac{\\Sigma(|positive|)-\\Sigma(|negative|)}{\\Sigma(|positive|)+\\Sigma(|negative|)}x100"
+html <- knitr::is_html_output()
+rd <- !html
+```
+
+```{r, include=html, echo = FALSE}
+katex::katex_html(equation)
+katex::katex_html(katex::example_math())
+```
+
+```{r, echo = FALSE}
+#just for checking
+katex::math_to_rd(equation)
+katex::math_to_rd(katex::example_math())
+```
+
+
+<!-- ```{r, include=rd, results='asis'} -->
+<!-- eval(parse(text=sprintf("\\Sexpr[results=rd, stage=build]{katex::math_to_rd('%s')}", equation))) -->
+<!-- ``` -->
